@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Um Pedido Especial</title>
+
+    <style>
+        body{background-color: rgb(131, 18, 93);
+        
+        }
+        .painel{
+            margin: auto;
+            background-color: rgb(248, 247, 181);
+            width: 500px;
+            height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+        #sim{
+            height: 50px;
+            width: 80px;
+            background-color: rgb(230, 112, 171);
+            border: rgb(247, 246, 189);
+            border-radius: 20px;
+            color: rgb(247, 246, 189);
+            margin-left: -90px;
+        }
+        #nao{
+            position: absolute;
+            height: 50px;
+            width: 80px;
+            background-color: rgb(230, 112, 171);
+            border: 2px solid rgb(247, 246, 189);
+            border-radius: 20px;
+            color: rgb(247, 246, 189);
+            margin-left: 20px;
+        }
+
+        .tenor-gif-embed{
+            margin: auto;
+        }
+
+        img{
+            margin: auto;
+        }
+        </style>
+</head>
+<body>
+
+    <div class="painel">
+        <h1>Dia 15 é o nosso dia especial</h1>
+        <h5>E eu quero q seja pro resto da vida!</h5>
+
+        <img src="https://media.tenor.com/nZdx6pe0yS0AAAAi/hello-kitty-love-you.gif" alt="gif hello kitty">
+        <h3>Aceita namorar cmg?</h3>
+        <a href="pag2.html" target="_blank" rel="external"><button id="sim"> Sim! </button></a>
+        <button onmouseover="fuja()" id="nao"> Não!</button>
+
+    </div>
+
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+
+        }
+    </script>
+    
+</body>
+</html>
